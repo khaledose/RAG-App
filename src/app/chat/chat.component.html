@@ -1,0 +1,15 @@
+<div class="messages-container" #messagesContainer>
+  @for (message of messages; track message; let i = $index) {
+    <chat-message
+      [message]="message.content"
+      [isLoading]="message.action.loading"
+      [isTyping]="message.action.typing"
+      (scrollRequest)="scrollToBottom()">
+      >
+    </chat-message>
+  }
+</div>
+
+<div class="floating-input">
+  <chat-input (contentEmitter)="onMessageSent($event)"></chat-input>
+</div>

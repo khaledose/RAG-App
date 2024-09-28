@@ -1,0 +1,16 @@
+<form class="input-container" (ngSubmit)="emitContent()" (keyup.enter)="emitContent()">
+  <textarea
+      class="input-textarea"
+      matInput
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="2"
+      cdkAutosizeMaxRows="10"
+      placeholder="Type here..."
+      name="message"
+      [(ngModel)]="content">
+    </textarea>
+  <button mat-fab class="input-button" type="submit" [disabled]="inputButtonDisabled">
+    <fa-icon [icon]="sendIcon"></fa-icon>
+  </button>
+</form>

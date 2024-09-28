@@ -1,0 +1,28 @@
+<div class="chat-message" [ngClass]="messageClass">
+  <div class="avatar-container">
+    <div class="avatar" [ngClass]="messageClass">
+    </div>
+  </div>
+  <div class="message-content">
+    @if (isLoading) {
+      <div class="loading-container">
+        <mat-spinner class="loading-spinner"></mat-spinner>
+        <div class="loading-message">Loading</div>
+      </div>
+    }
+    @else {
+      <markdown clipboard lineNumbers [data]="content"></markdown>
+    }
+
+    @if (message.sender === 0 && !isLoading && !isTyping) {
+      <div class="options">
+        <button color="primary" mat-icon-button (click)="readMessage()">
+          <fa-icon [icon]="playIcon"></fa-icon>
+        </button>
+        <button color="primary" mat-icon-button (click)="copyToClipboard()">
+          <fa-icon [icon]="clipboardIcon"></fa-icon>
+        </button>
+      </div>
+    }
+  </div>
+</div>

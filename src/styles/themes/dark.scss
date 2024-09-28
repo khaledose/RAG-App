@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+@use './palette.scss' as pal;
+@use '../../app/chat/chat-input/chat-input.theme' as chat-input;
+
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: pal.$primary,
+    tertiary: pal.$tertiary,
+    use-system-variables: true,
+  ),
+  typography: (
+    use-system-variables: true,
+  ),
+));
+
+.dark-theme {
+  @include mat.core-theme($dark-theme);
+  @include mat.all-component-colors($dark-theme);
+  @include mat.system-level-colors($dark-theme);
+  @include mat.system-level-typography($dark-theme);
+  // @include chat-input.color($dark-theme);
+}

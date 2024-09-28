@@ -1,0 +1,41 @@
+.input-container {
+  width: 50%;
+  margin: 0 auto;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  border-radius: 26px;
+  box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #ccc;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  background-color: inherit;
+
+  .input-textarea {
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+    border: none;
+    box-sizing: border-box;
+    margin: 0 20px;
+    background-color: inherit;
+  }
+
+  textarea:focus {
+    outline: none;
+    border: none;
+  }
+
+  .input-button {
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 10px;
+    box-shadow: none;
+  }
+}

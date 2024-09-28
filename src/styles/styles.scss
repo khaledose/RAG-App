@@ -1,0 +1,34 @@
+@use '@angular/material' as mat;
+@use './themes/dark';
+
+@include mat.core();
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  overflow-y: scroll;
+  box-shadow: inset 0 0 4px #707070;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #888;
+}
+
+.markdown-code {
+  pre {
+    width: 100%;
+  }
+}
