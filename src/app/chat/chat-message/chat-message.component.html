@@ -1,8 +1,10 @@
 <div class="chat-message" [ngClass]="messageClass">
-  <div class="avatar-container">
-    <div class="avatar" [ngClass]="messageClass">
+  @if (message.sender === 0) {
+    <div class="avatar-container">
+      <div class="avatar" [ngClass]="messageClass">
+      </div>
     </div>
-  </div>
+  }
   <div class="message-content">
     @if (isLoading) {
       <div class="loading-container">
